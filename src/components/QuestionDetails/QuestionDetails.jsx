@@ -21,7 +21,13 @@ const QuestionDetails = () => {
         <h2>
           {questionDetails.name}
         </h2>
+        <h4>
+          {questionDetails.owner.name}
+        </h4>
       </div>
+      <main>
+        {questionDetails.content}
+      </main>
     </section>
     </>
   )
