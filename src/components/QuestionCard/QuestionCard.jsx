@@ -7,7 +7,7 @@ const QuestionCard = ({question}) => {
     <>
       <Link to={`/questions/${question._id}`}>
         <div>
-          <h2>{question.owner}</h2>
+          <h2>{question.owner.name}</h2>
           <h2>{question.name}</h2>
         </div>
         <div>
