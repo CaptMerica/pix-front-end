@@ -22,8 +22,9 @@ const show = async (id) => {
   }
 }
 
+// const createComment = async 
 
 export {
   index,
-  show
+  show,
 }
