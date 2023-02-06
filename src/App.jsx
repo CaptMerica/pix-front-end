@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -8,6 +8,8 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import QuestionsList from './pages/QuestionsList/QuestionList'
+import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -15,6 +17,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as questionService from './services/questionService'
 
 // styles
 import './App.css'
@@ -22,6 +25,7 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [questions, setQuestions] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -33,10 +37,32 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  useEffect(() => {
+    const fetchAllQuestions = async () => {
+      const data = await questionService.index()
+      setQuestions(data)
+    }
+    fetchAllQuestions()
+  }, [])
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        <Route 
+          path="/questions" 
+          element={<QuestionsList 
+          questions={questions} />} 
+          />
+          <Route 
+          path="/questions/:id" 
+          element={<QuestionDetails 
+          questions={questions} />} 
+          />
+        <Route
+          path="/signup"
+          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
+        />
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/signup"
