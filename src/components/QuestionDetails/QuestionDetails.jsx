@@ -13,8 +13,7 @@ const QuestionDetails = () => {
     }
     fetchDetails()
   }, [id])
-
-  console.log(questionDetails);
+  
   if (!questionDetails) return <h1>Loading</h1>
 
   return (
