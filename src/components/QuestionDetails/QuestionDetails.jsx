@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { show } from "../../services/questionService"
 
 const QuestionDetails = () => {
-  const [ questionDetails, setQuestionDetails ] = useState({})
+  const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 
   useEffect(() => {
@@ -13,6 +13,9 @@ const QuestionDetails = () => {
     }
     fetchDetails()
   }, [id])
+
+  console.log(questionDetails);
+  if (!questionDetails) return <h1>Loading</h1>
 
   return (
     <>
