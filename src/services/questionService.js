@@ -1,4 +1,4 @@
-import * as questionService from "./tokenService"
+import * as tokenService from "./tokenService"
 
 
 // https://localhost:3001/questions
@@ -22,9 +22,27 @@ const show = async (id) => {
   }
 }
 
-// const createComment = async 
+const createComment = async (id, commentData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(commentData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export {
   index,
   show,
+  // create,
+  // update,
+  // deleteBlog,
+  createComment,
 }
