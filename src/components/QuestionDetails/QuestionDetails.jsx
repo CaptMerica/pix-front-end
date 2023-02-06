@@ -1,26 +1,45 @@
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { show } from "../../services/questionService"
 
+const QuestionDetails = () => {
+  const [ questionDetails, setQuestionDetails ] = useState(null)
+  const { id } = useParams()
 
-const QuestionDetails = (props) => {
+  useEffect(() => {
+    const fetchDetails = async () => {
+      const questionData = await show (id)
+      setQuestionDetails(questionData)
+    }
+    fetchDetails()
+  }, [id])
+
+  if (!questionDetails) return <h1>Loading</h1>
+
   return (
     <>
+    <section>
+      <div>
+        <h2>
+          {questionDetails.name}
+        </h2>
+        <h4>
+          {questionDetails.owner.name}
+        </h4>
+      </div>
+      <main>
+        {questionDetails.content}
+      </main>
+    </section>
+    <section>
     <ul>
-      {props.questions.map((question) => (
-        <l1>
-          <div>
-          <h1>{question.owner}</h1>
-          <h3>{question.name}</h3>
-          </div>
-          <div>
-            {question.content}
-          </div>
-          <div>
-            {question.comments.map((comment) => (
-              <h4>{comment.content}</h4>
-            ))}
-          </div>
-        </l1>
+      {questionDetails.comments.map((comment) => (
+        <li>
+          {comment.content}
+        </li>
       ))}
     </ul>
+    </section>
     </>
   )
 }
