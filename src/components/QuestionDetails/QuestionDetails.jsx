@@ -13,7 +13,7 @@ const QuestionDetails = () => {
     }
     fetchDetails()
   }, [id])
-  
+
   if (!questionDetails) return <h1>Loading</h1>
 
   return (
@@ -30,6 +30,15 @@ const QuestionDetails = () => {
       <main>
         {questionDetails.content}
       </main>
+    </section>
+    <section>
+    <ul>
+      {questionDetails.comments.map((comment) => (
+        <li>
+          {comment.content}
+        </li>
+      ))}
+    </ul>
     </section>
     </>
   )
