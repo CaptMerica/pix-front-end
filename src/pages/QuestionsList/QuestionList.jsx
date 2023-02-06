@@ -6,8 +6,18 @@ const QuestionsList = (props) => {
     <ul>
       {props.questions.map((question) => (
         <l1>
-          <h1>{question.name}</h1>
-          <h2>{question.owner}</h2>
+          <div>
+          <h1>{question.owner}</h1>
+          <h3>{question.name}</h3>
+          </div>
+          <div>
+            {question.content}
+          </div>
+          <div>
+            {question.comments.map((comment) => (
+              <h4>{comment.content}</h4>
+            ))}
+          </div>
         </l1>
       ))}
     </ul>
