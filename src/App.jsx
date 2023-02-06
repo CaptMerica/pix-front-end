@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -16,6 +16,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as questionService from './services/questionService'
 
 // styles
 import './App.css'
@@ -23,6 +24,7 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [questions, setQuestions] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -34,11 +36,19 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  useEffect(() => {
+    const fetchAllQuestions = async () => {
+      const data = await questionService.index()
+      setQuestions(data)
+    }
+    fetchAllQuestions()
+  }, [])
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-      <Route path="/questions" element={<QuestionsList user={user} />} />
+      <Route path="/questions" element={<QuestionsList questions={questions} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
