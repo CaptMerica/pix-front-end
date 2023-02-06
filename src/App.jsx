@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
+import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -48,7 +49,16 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-      <Route path="/questions" element={<QuestionsList questions={questions} />} />
+        <Route 
+          path="/questions" 
+          element={<QuestionsList 
+          questions={questions} />} 
+          />
+          <Route 
+          path="/questions/:id" 
+          element={<QuestionDetails 
+          questions={questions} />} 
+          />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
