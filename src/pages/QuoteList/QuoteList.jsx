@@ -1,4 +1,5 @@
 const QuoteList = (props) => {
+  console.log(props)
 
   return (
     <>
