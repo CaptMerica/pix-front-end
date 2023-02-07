@@ -80,6 +80,14 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route 
+            path="/questions/:id/edit"
+            element={
+              <ProtectedRoute user={user}>
+                <EditQuestion handleUpdateQuestion={handleUpdateQuestion} />
+              </ProtectedRoute>
+            }
+          />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
