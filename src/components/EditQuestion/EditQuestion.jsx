@@ -1,10 +1,9 @@
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 const EditQuestion = (props) => {
-  const [form, setForm] = useState({
-    name: '',
-    content: ''
-  })
+  const {state} = useLocation()
+  const [form, setForm] = useState(state)
 
   const handleChange = ({target}) => {
     setForm({ ...form, [target.name]: target.value})
@@ -12,7 +11,7 @@ const EditQuestion = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.handleAddQuestion(form)
+    props.handleUpdateQuestion(form)
   }
 
   return (
@@ -23,7 +22,7 @@ const EditQuestion = (props) => {
             autoComplete="off"
             type="text"
             name="name"
-            value={form.title}
+            value={form.name}
             placeholder="Add a title"
             onChange={handleChange}
           />
@@ -34,7 +33,7 @@ const EditQuestion = (props) => {
           placeholder="Add optional body text"
           onChange={handleChange}
         />
-        <button type="submit">Create Question</button>
+        <button type="submit">Submit Edit</button>
       </form>
     </div>
   )
