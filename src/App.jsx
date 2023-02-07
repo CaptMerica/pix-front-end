@@ -40,7 +40,7 @@ const App = () => {
 
   const handleAddQuestion = async (questionData) => {
     const newQuestion = await questionService.create(questionData)
-    setQuestions([newQuestion, ... questions])
+    setQuestions([newQuestion, ...questions])
     navigate('/questions')
   }
 
