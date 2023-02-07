@@ -12,18 +12,6 @@ const QuestionDetails = () => {
     setQuestionDetails({ ...questionDetails, comments: [...questionDetails.comments, newComment] })
   }
 
-    const [form, setForm] = useState({ content: '' })
-  
-    const handleChange = ({ target }) => {
-      setForm({ ...form, [target.name]: target.value })
-    }
-  
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      handleAddComment(form)
-      setForm({ content: '' })
-    }
-
   useEffect(() => {
     const fetchDetails = async () => {
       const questionData = await show (id)
