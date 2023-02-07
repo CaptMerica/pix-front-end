@@ -38,6 +38,14 @@ const createComment = async (id, commentData) => {
   }
 }
 
+const updateComment = async (req, res) => {
+  try {
+
+  } catch {
+
+  }
+}
+
 export {
   index,
   show,
@@ -45,4 +53,5 @@ export {
   // update,
   // deleteBlog,
   createComment,
+  updateComment,
 }
