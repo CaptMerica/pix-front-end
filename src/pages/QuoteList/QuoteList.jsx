@@ -5,7 +5,11 @@ const QuoteList = (props) => {
   console.log(props)
   return (
     <>
-      <NewQuote to="quotes/new">New Quote</NewQuote>
+      <a href="/quotes/new">
+        <button>
+          Add Quote
+        </button>
+      </a>
       {props.quotes.map((quote) => (
         <div key={quote._id}>
           <QuoteCard quote={quote} />
