@@ -70,7 +70,9 @@ const App = () => {
         <Route 
           path="/quotes"
           element={<QuoteList
-          quotes={quotes} />}
+            quotes={quotes}
+            user={user}
+          />}
         />
         <Route 
           path="/quotes/new"
