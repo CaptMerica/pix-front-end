@@ -11,6 +11,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 import QuoteList from './pages/QuoteList/QuoteList'
+import NewQuote from './pages/NewQuote/NewQuote'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -70,6 +71,14 @@ const App = () => {
           path="/quotes"
           element={<QuoteList
           quotes={quotes} />}
+        />
+        <Route 
+          path="/quotes/new"
+          element={
+            <ProtectedRoute user={user}>
+              <NewQuote handleAddQuote={handleAddQuote} />
+            </ProtectedRoute>
+          }
         />
         <Route 
           path="/questions" 
