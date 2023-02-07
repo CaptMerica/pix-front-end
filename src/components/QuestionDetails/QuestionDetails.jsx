@@ -29,10 +29,10 @@ const QuestionDetails = () => {
       <section>
         <div>
           <h2>
-            {questionDetails.name}
+            {questionDetails.owner.name}
           </h2>
           <h4>
-            {questionDetails.owner.name}
+            {questionDetails.name}
           </h4>
         </div>
         <main>

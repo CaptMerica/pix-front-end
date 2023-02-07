@@ -29,8 +29,8 @@ const NewQuestion = (props) => {
           />
         <textarea
           type="text"
-          name="name"
-          value={form.title}
+          name="content"
+          value={form.content}
           placeholder="Add optional body text"
           onChange={handleChange}
         />
