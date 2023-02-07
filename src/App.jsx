@@ -37,7 +37,11 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  // const 
+  const handleAddQuestion = async (questionData) => {
+    const newQuestion = await questionService.create(questionData)
+    setQuestions([newQuestion, ... questions])
+    navigate('/questions')
+  }
 
   useEffect(() => {
     const fetchAllQuestions = async () => {
@@ -60,6 +64,14 @@ const App = () => {
           path="/questions/:id" 
           element={<QuestionDetails 
           questions={questions} />} 
+          />
+          <Route 
+            path="/questions/new"
+            element={
+              <ProtectedRoute user={user}>
+                <NewQuestion handleAddQuestion={handleAddQuestion} />
+              </ProtectedRoute>
+            }
           />
         <Route
           path="/signup"
