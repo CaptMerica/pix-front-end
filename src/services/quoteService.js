@@ -29,7 +29,24 @@ const create = async (quoteData) => {
   }
 }
 
+const update = async (quoteData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${quoteData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(quoteData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export { 
   index,
   create,
+  update,
 }
