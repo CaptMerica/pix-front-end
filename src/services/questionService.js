@@ -22,6 +22,22 @@ const show = async (id) => {
   }
 }
 
+const create = async (questionData) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(questionData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const createComment = async (id, commentData) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}/comments`, {
@@ -41,7 +57,7 @@ const createComment = async (id, commentData) => {
 export {
   index,
   show,
-  // create,
+  create,
   // update,
   // deleteBlog,
   createComment,

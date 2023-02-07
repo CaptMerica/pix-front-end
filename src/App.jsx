@@ -37,6 +37,8 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  // const 
+
   useEffect(() => {
     const fetchAllQuestions = async () => {
       const data = await questionService.index()
