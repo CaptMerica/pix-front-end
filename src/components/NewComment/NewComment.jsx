@@ -15,20 +15,20 @@ const NewComment = (props) => {
   }
 
   return (
-    <>
+    <div>
       <form onSubmit={handleSubmit}>
         <textarea
           required
           type="text"
           name="content"
           id="content-input"
-          value={props.comments.content}
+          value={form.content}
           placeholder="Add a Comment"
           onChange={handleChange}
         />
         <button type="submit">Add a Comment</button>
       </form>
-    </>
+    </div>
   )
 
 }

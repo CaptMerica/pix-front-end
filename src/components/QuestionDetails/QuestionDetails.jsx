@@ -44,7 +44,7 @@ const QuestionDetails = () => {
         <NewComment handleAddComment={handleAddComment} />
         <ul>
           {questionDetails.comments.map((comment) => (
-            <li>
+            <li key={comment._id}>
               {comment.content}
             </li>
           ))}
