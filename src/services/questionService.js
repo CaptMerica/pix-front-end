@@ -55,6 +55,14 @@ const updateComment = async (questionId, commentId, commentData) => {
   }
 }
 
+const deleteComment = async (blogId, commentId) => {
+  try {
+
+  } catch {
+
+  }
+}
+
 export {
   index,
   show,
@@ -63,4 +71,5 @@ export {
   // deleteBlog,
   createComment,
   updateComment,
+  deleteComment
 }
