@@ -24,7 +24,7 @@ const show = async (id) => {
 
 const createComment = async (id, commentData) => {
   try {
-    const res = await fetch(`${BASE_URL}/${id}`, {
+    const res = await fetch(`${BASE_URL}/${id}/comments`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,

@@ -12,7 +12,6 @@ const QuestionDetails = () => {
     setQuestionDetails({ ...questionDetails, comments: [...questionDetails.comments, newComment] })
   }
 
-  const newComment = (questionDetails) => {
     const [form, setForm] = useState({ content: '' })
   
     const handleChange = ({ target }) => {
@@ -34,6 +33,7 @@ const QuestionDetails = () => {
   }, [id])
 
   if (!questionDetails) return <h1>Loading</h1>
+  if (!questionDetails.comments) return <h1>Loading</h1>
 
   return (
     <>
@@ -57,7 +57,7 @@ const QuestionDetails = () => {
             type="text"
             name="content"
             id="content-input"
-            value={questionDetails.comment.content}
+            value={questionDetails.comments.content}
             placeholder="Add a Comment"
             onChange={handleChange}
           />
@@ -73,7 +73,6 @@ const QuestionDetails = () => {
       </section>
     </>
   )
-}
 }
 
 
