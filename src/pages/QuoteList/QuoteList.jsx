@@ -1,13 +1,16 @@
-const QuoteList = (props) => {
-  console.log(props)
+import QuoteCard from "../../components/QuoteCard/QuoteCard"
 
+const QuoteList = (props) => {
   return (
     <>
-      <main>
-        Quote List
-      </main>
+      {props.quotes.map((quote, idx) => (
+        <div key={idx}>
+          <QuoteCard quote={quote} />
+        </div>
+      ))}
     </>
   )
 }
+
 
 export default QuoteList
