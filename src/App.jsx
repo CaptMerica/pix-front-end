@@ -44,6 +44,12 @@ const App = () => {
     navigate('/questions')
   }
 
+  const handleUpdateQuestion = async (questionData) => {
+    const updatedQuestion = await questionService.update(questionData)
+    setQuestions(questions.map((question) => questionData._id === question._id ? updatedQuestion : question))
+    navigate('/questions')
+  }
+
   useEffect(() => {
     const fetchAllQuestions = async () => {
       const data = await questionService.index()
