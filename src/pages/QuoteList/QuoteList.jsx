@@ -3,8 +3,8 @@ import QuoteCard from "../../components/QuoteCard/QuoteCard"
 const QuoteList = (props) => {
   return (
     <>
-      {props.quotes.map((quote, idx) => (
-        <div key={idx}>
+      {props.quotes.map((quote) => (
+        <div key={quote._id}>
           <QuoteCard quote={quote} />
         </div>
       ))}
