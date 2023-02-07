@@ -39,18 +39,6 @@ const QuestionDetails = () => {
         </main>
       </section>
       <section>
-        <form onSubmit={handleSubmit}>
-          <textarea
-            required
-            type="text"
-            name="content"
-            id="content-input"
-            value={questionDetails.comments.content}
-            placeholder="Add a Comment"
-            onChange={handleChange}
-          />
-        <button type="submit">Add a Comment</button>
-        </form>
       <ul>
         {questionDetails.comments.map((comment) => (
           <li>
