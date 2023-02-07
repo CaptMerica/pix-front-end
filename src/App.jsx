@@ -11,6 +11,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 
+import QuoteList from './pages/QuoteList/QuoteList'
+
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
@@ -49,6 +51,11 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        <Route 
+          path="/quotes"
+          element={<QuoteList
+          quotes={quotes} />}
+        />
         <Route 
           path="/questions" 
           element={<QuestionsList 
