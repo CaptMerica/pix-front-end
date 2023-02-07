@@ -1,6 +1,7 @@
 import QuoteCard from "../../components/QuoteCard/QuoteCard"
 
 const QuoteList = (props) => {
+  console.log(props)
   return (
     <>
       {props.quotes.map((quote) => (

@@ -56,6 +56,12 @@ const App = () => {
     fetchAllQuotes()
   }, [])
 
+  const handleAddQuote = async (quoteData) => {
+    const newQuote = await quoteService.create(quoteData)
+    setQuotes([newQuote, ...quotes])
+    navigate('/quotes')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
