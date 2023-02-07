@@ -10,6 +10,7 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
+import NewQuestion from './components/NewQuestion/NewQuestion'
 
 // components
 import NavBar from './components/NavBar/NavBar'
