@@ -63,10 +63,10 @@ const App = () => {
     navigate('/quotes')
   }
 
-  const handleUpdateBlog = async (quoteData) => {
+  const handleUpdateQuote = async (quoteData) => {
     const updatedQuote = await quoteService.update(quoteData)
     setQuotes(quotes.map((b) => quoteData._id === b._id ? updatedQuote : b))
-    navigate('/blogs')
+    navigate('/quotesU')
   }
 
   return (
