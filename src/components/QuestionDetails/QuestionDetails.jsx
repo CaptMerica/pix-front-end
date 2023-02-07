@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
+import NewComment from "../NewComment/NewComment"
 
 const QuestionDetails = () => {
   const [ questionDetails, setQuestionDetails ] = useState(null)
@@ -39,13 +40,15 @@ const QuestionDetails = () => {
         </main>
       </section>
       <section>
-      <ul>
-        {questionDetails.comments.map((comment) => (
-          <li>
-            {comment.content}
-          </li>
-        ))}
-      </ul>
+        <h2>Comments</h2>
+        <NewComment handleAddComment={handleAddComment} />
+        <ul>
+          {questionDetails.comments.map((comment) => (
+            <li>
+              {comment.content}
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   )
