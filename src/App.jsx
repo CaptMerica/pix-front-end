@@ -20,6 +20,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as questionService from './services/questionService'
+import * as quoteService from './services/quoteService'
 
 // styles
 import './App.css'
@@ -28,6 +29,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   const [questions, setQuestions] = useState([])
+  const [quotes, setQuotes] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -45,6 +47,14 @@ const App = () => {
       setQuestions(data)
     }
     fetchAllQuestions()
+  }, [])
+  
+  useEffect(() => {
+    const fetchAllQuotes = async () => {
+      const data = await quoteService.index()
+      setQuotes(data)
+    }
+    fetchAllQuotes()
   }, [])
 
   return (
