@@ -16,12 +16,15 @@ const QuoteList = (props) => {
       {props.quotes.map((quote) => (
         <div key={quote._id}>
           <QuoteCard quote={quote} />
-          {quote.author &&
-            <Link to="/quotes/:id/edit">
-              <button>
-                Edit Quote
-              </button>
-            </Link>
+          {quote.author._id === props.user.profile &&
+            <>
+              <Link to="/quotes/:id/edit" state={quote}>
+                <button>
+                  Edit Quote
+                </button>
+              </Link>
+              <button>Delete</button>
+            </>
           }   
         </div>
       ))}

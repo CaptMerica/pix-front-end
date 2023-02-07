@@ -12,6 +12,7 @@ import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 import QuoteList from './pages/QuoteList/QuoteList'
 import NewQuote from './pages/NewQuote/NewQuote'
+import EditQuote from './pages/EditQuote/EditQuote'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -65,8 +66,8 @@ const App = () => {
 
   const handleUpdateQuote = async (quoteData) => {
     const updatedQuote = await quoteService.update(quoteData)
-    setQuotes(quotes.map((b) => quoteData._id === b._id ? updatedQuote : b))
-    navigate('/quotesU')
+    setQuotes(quotes.map((quote) => quoteData._id === quote._id ? updatedQuote : quote))
+    navigate('/quotes')
   }
 
   return (
@@ -85,6 +86,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <NewQuote handleAddQuote={handleAddQuote} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/quotes/:id/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditQuote handleUpdateQuote={handleUpdateQuote} />
             </ProtectedRoute>
           }
         />

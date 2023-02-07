@@ -13,26 +13,27 @@ const EditQuote = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Update this line shortly...
+    props.handleUpdateQuote(form)
+    setForm({ content: '' })
   }
 
+  console.log("FORM DATA", form)
+
   return (
-    <>
-      <main>
-        <form onSubmit={handleSubmit}>
-          <textarea
-            required
-            type="text"
-            name="content"
-            id="content-input"
-            value={form.content}
-            placeholder="Edit Quote"
-            onChange={handleChange}
-          />
-          <button type="submit">Edit Quote</button>
-        </form>
-      </main>
-    </>
+    <main>
+      <form onSubmit={handleSubmit}>
+        <textarea
+          required
+          type="text"
+          name="content"
+          id="content-input"
+          value={form.content}
+          placeholder="Edit Quote"
+          onChange={handleChange}
+        />
+        <button type="submit">Edit Quote</button>
+      </form>
+    </main>
   )
 }
 
