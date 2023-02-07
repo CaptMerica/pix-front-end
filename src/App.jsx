@@ -11,6 +11,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 import NewQuestion from './components/NewQuestion/NewQuestion'
+import EditQuestion from './components/EditQuestion/EditQuestion'
 
 // components
 import NavBar from './components/NavBar/NavBar'

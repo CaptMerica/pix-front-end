@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
@@ -38,6 +39,12 @@ const QuestionDetails = () => {
         <main>
           {questionDetails.content}
         </main>
+        <div>
+        <Link 
+          to={`/questions/${id}/edit`} 
+          state={questionDetails}>Edit</Link>
+          {/* <button>Delete</button> */}
+        </div>
       </section>
       <section>
         <h2>Comments</h2>
