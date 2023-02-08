@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { show } from "../../services/questionService"
+import { deleteComment, show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
+
 
 const QuestionDetails = () => {
   const [ questionDetails, setQuestionDetails ] = useState(null)
@@ -12,6 +13,12 @@ const QuestionDetails = () => {
     const newComment = await createComment(id, commentData)
     setQuestionDetails({ ...questionDetails, comments: [...questionDetails.comments, newComment] })
   }
+
+  // const handleDeleteComment = async (commentData) => {
+  //   const deleteComment = await deleteComment(id, commentData)
+  //   setQuestionDetails({...questionDetails, comments: questionDetails.comments.filter((c) =>c._id !==commentId) })
+  // }
+
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -48,6 +55,7 @@ const QuestionDetails = () => {
               {comment.content}
             </li>
           ))}
+          {/* <deleteComment handleDeleteComment={handleDeleteComment} /> */}
         </ul>
       </section>
     </>

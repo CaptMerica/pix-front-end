@@ -39,29 +39,35 @@ const createComment = async (id, commentData) => {
   }
 }
 
-const updateComment = async (questionId, commentId, commentData) => {
-  try {
-    const res = await fetch(`${BASE_URL}/${questionId}/comments/${commentId}`, {
-      method: 'PUT',
-      headers: {
-        'Authorization': `Bearer ${tokenService.getToken()}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(commentData)
-    })
-    return res.json()
-  } catch (error) {
-    console.log(error)
-  }
-}
+// const updateComment = async (questionId, commentId, commentData) => {
+//   try {
+//     const res = await fetch(`${BASE_URL}/${questionId}/comments/${commentId}`, {
+//       method: 'PUT',
+//       headers: {
+//         'Authorization': `Bearer ${tokenService.getToken()}`,
+//         'Content-Type': 'application/json'
+//       },
+//       body: JSON.stringify(commentData)
+//     })
+//     return res.json()
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
 
-const deleteComment = async (blogId, commentId) => {
-  try {
-
-  } catch {
-
-  }
-}
+// const deleteComment = async (questionId, commentId, commentData) => {
+//   try {
+//     const res = await fetch(`${BASE_URL}/${questionId}/comments/${commentId}`, {
+//       method: 'DELETE',
+//       headers: {
+//         'Authorization': `Bearer ${tokenService.getToken()}`
+//       }
+//     })
+//     return res.json()
+//   } catch (error){
+//       console.log(error);
+//   }
+// }
 
 export {
   index,
@@ -70,6 +76,6 @@ export {
   // update,
   // deleteBlog,
   createComment,
-  updateComment,
-  deleteComment
+  // updateComment,
+  // deleteComment
 }
