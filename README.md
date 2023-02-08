@@ -1,6 +1,6 @@
 # Pix
 
-![A mental helth app for musicians by Tritonic]()
+![A mental health app for musicians by Tritonic]()
 
 Pix 
 
@@ -27,3 +27,27 @@ Pix
 
 ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
+## Attributions 🤝
+
+## Recent Changes 📈
+
+- 
+
+
+## Ice Box 🧊
+
+[] Create a voting system with "likes" that are given to users based on how helpful the comment is for the corresponding question.
+
+[] Upvoting and downvoting on a user's comments and posts.
+
+[] Users and guests can view a user's profile and their individual details.
+
+[] Badges for accolades given to users for the number of helpful comments.
+
+[] Dark Mode!
+
+[] Mobile-responsive design.
+
+[] Add level of expertise to the user's profile.
+
+[] Add a pop-up window of the sign up/log in page when clicking the respective buttons while on the current page instead of being redirected to do so.
