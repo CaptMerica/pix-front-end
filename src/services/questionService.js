@@ -41,6 +41,7 @@ const create = async (questionData) => {
 const update = async (questionData) => {
   try{
     const res = await fetch(`${BASE_URL}/${questionData._id}`, {
+      method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
