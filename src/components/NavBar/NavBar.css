@@ -12,6 +12,9 @@
   border: 2px solid red;
   height: inherit;
   width: inherit;
+  margin-left: -18px;
+  
+  
 }
 
 .button-div {
@@ -24,7 +27,7 @@
   padding: 0 16px;
   border: 1px solid lightgray;
   border-radius: 18px;
-  background-color: lightblue;
+  background-color: #28d9c1;
   box-shadow: 0 2px 2px rgba(0,0,0, 0.1);
   text-align: center;
   font-size: 14px;
@@ -38,10 +41,15 @@
 .nav-btn:hover {
   background-color: #e60022;
   color: whitesmoke;
-  box-shadow: 0 8px 8px rgba(0,0,0, 0.1);
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
   border: 0.5px solid black;
   font-weight: 800;
 }
 li {
   display: inline;
+}
+
+#logo {
+  height: inherit;
+  width: inherit;
 }
