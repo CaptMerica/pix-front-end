@@ -12,6 +12,9 @@ import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
 import NewQuestion from './components/NewQuestion/NewQuestion'
 import EditQuestion from './components/EditQuestion/EditQuestion'
+import QuoteList from './pages/QuoteList/QuoteList'
+import NewQuote from './pages/NewQuote/NewQuote'
+import EditQuote from './pages/EditQuote/EditQuote'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -20,6 +23,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as questionService from './services/questionService'
+import * as quoteService from './services/quoteService'
 
 // styles
 import './App.css'
@@ -28,6 +32,7 @@ const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
   const [questions, setQuestions] = useState([])
+  const [quotes, setQuotes] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -64,11 +69,61 @@ const App = () => {
     }
     fetchAllQuestions()
   }, [])
+  
+  useEffect(() => {
+    const fetchAllQuotes = async () => {
+      const data = await quoteService.index()
+      setQuotes(data)
+    }
+    fetchAllQuotes()
+  }, [])
+
+  const handleAddQuote = async (quoteData) => {
+    const newQuote = await quoteService.create(quoteData)
+    setQuotes([newQuote, ...quotes])
+    navigate('/quotes')
+  }
+
+  const handleUpdateQuote = async (quoteData) => {
+    const updatedQuote = await quoteService.update(quoteData)
+    setQuotes(quotes.map((quote) => quoteData._id === quote._id ? updatedQuote : quote))
+    navigate('/quotes')
+  }
+
+  const handleDeleteQuote = async (id) => {
+    const deletedQuote = await quoteService.deleteQuote(id)
+    setQuotes(quotes.filter(quote => quote._id !== deletedQuote._id))
+    navigate('/quotes')
+  }
 
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        <Route 
+          path="/quotes"
+          element={<QuoteList
+            quotes={quotes}
+            user={user}
+            handleDeleteQuote={handleDeleteQuote}
+          />}
+        />
+        <Route 
+          path="/quotes/new"
+          element={
+            <ProtectedRoute user={user}>
+              <NewQuote handleAddQuote={handleAddQuote} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/quotes/:id/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditQuote handleUpdateQuote={handleUpdateQuote} />
+            </ProtectedRoute>
+          }
+        />
         <Route 
           path="/questions" 
           element={<QuestionsList 
