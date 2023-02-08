@@ -70,6 +70,12 @@ const App = () => {
     navigate('/quotes')
   }
 
+  const handleDeleteQuote = async (id) => {
+    const deletedQuote = await quoteService.deleteQuote(id)
+    setQuotes(quotes.filter(quote => quote._id !== deletedQuote._id))
+    navigate('/qoutes')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />

@@ -54,7 +54,7 @@ const deleteQuote = async (id) => {
     })
     return res.json()
   } catch (error) {
-    console.log(error);
+    console.log(error)
   }
 }
 
