@@ -40,7 +40,7 @@ const QuestionDetails = (props) => {
           {questionDetails.content}
         </main>
         <div>
-          {questionDetails.owner._id === props.user.profile &&
+          {questionDetails.owner._id === props.user &&
             <>
               <Link 
                 to={`/questions/${id}/edit`} 
@@ -54,7 +54,9 @@ const QuestionDetails = (props) => {
       </section>
       <section>
         <h2>Comments</h2>
+        {props.user && 
         <NewComment handleAddComment={handleAddComment} />
+        }
         <ul>
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>
