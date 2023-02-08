@@ -44,9 +44,23 @@ const update = async (quoteData) => {
     console.log(error)
   }
 }
+const deleteQuote = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/$(id)`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 export { 
   index,
   create,
   update,
+  deleteQuote
 }
