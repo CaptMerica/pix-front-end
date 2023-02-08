@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 
 
 const QuestionCard = ({question}) => {
-  console.log(question)
   return (
     <>
       <Link to={`/questions/${question._id}`}>

@@ -54,6 +54,7 @@ const App = () => {
   const handleDeleteQuestion = async (id) => {
     const deletedQuestion = await questionService.deleteQuestion(id)
     setQuestions(questions.filter(question => question._id !== deletedQuestion._id))
+    navigate('/questions')
   }
 
   useEffect(() => {

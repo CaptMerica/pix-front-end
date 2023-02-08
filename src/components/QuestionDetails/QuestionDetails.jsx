@@ -5,7 +5,7 @@ import { show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
 
-const QuestionDetails = () => {
+const QuestionDetails = (props) => {
   const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 
@@ -40,10 +40,16 @@ const QuestionDetails = () => {
           {questionDetails.content}
         </main>
         <div>
-        <Link 
-          to={`/questions/${id}/edit`} 
-          state={questionDetails}>Edit</Link>
-          {/* <button>Delete</button> */}
+          {questionDetails.owner._id === props.user.profile &&
+            <>
+              <Link 
+                to={`/questions/${id}/edit`} 
+                state={questionDetails}>
+                <button>Edit Question</button>
+                </Link>
+                <button onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
+            </>
+          }
         </div>
       </section>
       <section>
