@@ -51,7 +51,10 @@ const App = () => {
     navigate('/questions')
   }
 
-  
+  const handleDeleteQuestion = async (id) => {
+    const deletedQuestion = await questionService.deleteQuestion(id)
+    setQuestions(questions.filter(question => question._id !== deletedQuestion._id))
+  }
 
   useEffect(() => {
     const fetchAllQuestions = async () => {
@@ -71,9 +74,12 @@ const App = () => {
           questions={questions} />} 
           />
           <Route 
-          path="/questions/:id" 
-          element={<QuestionDetails 
-          questions={questions} />} 
+            path="/questions/:id" 
+            element={<QuestionDetails 
+            questions={questions} 
+            user={user}
+            handleDeleteQuestion={handleDeleteQuestion}
+            />} 
           />
           <Route 
             path="/questions/new"
