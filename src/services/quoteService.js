@@ -46,7 +46,7 @@ const update = async (quoteData) => {
 }
 const deleteQuote = async (id) => {
   try {
-    const res = await fetch(`${BASE_URL}/$(id)`, {
+    const res = await fetch(`${BASE_URL}/${id}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`
