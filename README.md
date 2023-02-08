@@ -8,7 +8,12 @@ Pix
 
 ## [Trello Board](https://trello.com/b/iR0dlKnx/pix-trello-board)
 
-## Technologies Used 💾
+### [Meet the Team!]
+Ryan Merica: Git Commander | Documenter
+Patrick Mozara: Scrum Manager
+Oscar Nunez: UX Designer | Database Manager
+
+### Technologies Used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -25,13 +30,15 @@ Pix
 
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-## Attributions 🤝
+### Attributions 🤝
 
 ## Recent Changes 📈
 
-- 
+- Style buttons, landing page, 
+
+- Add and Delete Comments
 
 
 ## Ice Box 🧊
