@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
+import './NavBar.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
-    <nav>
+    <div className='navbar-container'>
       {user ?
         <ul>
           <li>Welcome, {user.name}</li>
@@ -22,7 +23,7 @@ const NavBar = ({ user, handleLogout }) => {
           <li><Link to="/signup">Sign Up</Link></li>
         </ul>
       }
-    </nav>
+    </div>
   )
 }
 

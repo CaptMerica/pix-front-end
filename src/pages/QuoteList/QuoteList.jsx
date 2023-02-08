@@ -14,7 +14,7 @@ const QuoteList = (props) => {
       {props.quotes.map((quote) => (
         <div key={quote._id}>
           <QuoteCard quote={quote} />
-          {quote.author._id === props.user.profile &&
+          {quote.author._id === props.user?.profile &&
             <>
               <Link to="/quotes/:id/edit" state={quote}>
                 <button>
