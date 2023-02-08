@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
 
-const QuestionDetails = () => {
+const QuestionDetails = (props) => {
   const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 
@@ -29,19 +30,33 @@ const QuestionDetails = () => {
       <section>
         <div>
           <h2>
-            {questionDetails.name}
+            {questionDetails.owner.name}
           </h2>
           <h4>
-            {questionDetails.owner.name}
+            {questionDetails.name}
           </h4>
         </div>
         <main>
           {questionDetails.content}
         </main>
+        <div>
+          {questionDetails.owner._id === props.user.profile &&
+            <>
+              <Link 
+                to={`/questions/${id}/edit`} 
+                state={questionDetails}>
+                <button>Edit Question</button>
+                </Link>
+                <button onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
+            </>
+          }
+        </div>
       </section>
       <section>
         <h2>Comments</h2>
+        {props.user && 
         <NewComment handleAddComment={handleAddComment} />
+        }
         <ul>
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>

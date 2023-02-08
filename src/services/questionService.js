@@ -1,6 +1,5 @@
 import * as tokenService from "./tokenService"
 
-
 // https://localhost:3001/questions
 const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/questions`
 
@@ -16,6 +15,38 @@ const index = async () => {
 const show = async (id) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}`)
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const create = async (questionData) => {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(questionData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const update = async (questionData) => {
+  try{
+    const res = await fetch(`${BASE_URL}/${questionData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(questionData)
+    })
     return res.json()
   } catch (error) {
     console.log(error);
@@ -38,11 +69,26 @@ const createComment = async (id, commentData) => {
   }
 }
 
+const deleteQuestion = async (id) => {
+  try {
+    const res = await fetch (`${BASE_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export {
   index,
   show,
-  // create,
-  // update,
-  // deleteBlog,
+  create,
+  update,
+  deleteQuestion,
   createComment,
 }

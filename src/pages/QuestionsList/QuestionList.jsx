@@ -4,10 +4,9 @@ const QuestionsList = (props) => {
   return (
     <>
       {props.questions.map((question, idx) => (
-        <div>
+        <div key={idx}>
           <QuestionCard 
-            question={question} 
-            key={idx}
+            question={question}
           />
         </div>
       ))}
