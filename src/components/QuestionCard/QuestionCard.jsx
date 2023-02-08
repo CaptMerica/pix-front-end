@@ -5,11 +5,11 @@ const QuestionCard = ({question}) => {
   return (
     <>
       <Link to={`/questions/${question._id}`}>
-        <div>
+        <div className="question-owner">
           <h2>{question.owner.name}</h2>
           <h2>{question.name}</h2>
         </div>
-        <div>
+        <div className="question-content">
           <h5>{question.content}</h5>
         </div>
       </Link >
