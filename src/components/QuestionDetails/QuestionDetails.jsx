@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
-import { show } from "../../services/questionService"
+import { deleteComment, show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
 
 const QuestionDetails = (props) => {
+  const navigate = useNavigate()
   const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 
   const handleAddComment = async (commentData) => {
     const newComment = await createComment(id, commentData)
     setQuestionDetails({ ...questionDetails, comments: [...questionDetails.comments, newComment] })
+  }
+
+  const handleDeleteComment = async (questionId, commentId) => {
+    const updatedQuestion = await deleteComment(questionId, commentId)
+    setQuestionDetails(updatedQuestion)
   }
 
   useEffect(() => {
@@ -61,6 +67,7 @@ const QuestionDetails = (props) => {
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>
               {comment.content}
+              <button onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
             </li>
           ))}
         </ul>
