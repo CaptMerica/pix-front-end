@@ -1,6 +1,6 @@
 // npm modules
 import { useEffect, useState } from 'react'
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -10,6 +10,8 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import QuestionsList from './pages/QuestionsList/QuestionList'
 import QuestionDetails from './components/QuestionDetails/QuestionDetails'
+import NewQuestion from './components/NewQuestion/NewQuestion'
+import EditQuestion from './components/EditQuestion/EditQuestion'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -37,6 +39,24 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddQuestion = async (questionData) => {
+    const newQuestion = await questionService.create(questionData)
+    setQuestions([newQuestion, ...questions])
+    navigate('/questions')
+  }
+
+  const handleUpdateQuestion = async (questionData) => {
+    const updatedQuestion = await questionService.update(questionData)
+    setQuestions(questions.map((question) => questionData._id === question._id ? updatedQuestion : question))
+    navigate('/questions')
+  }
+
+  const handleDeleteQuestion = async (id) => {
+    const deletedQuestion = await questionService.deleteQuestion(id)
+    setQuestions(questions.filter(question => question._id !== deletedQuestion._id))
+    navigate('/questions')
+  }
+
   useEffect(() => {
     const fetchAllQuestions = async () => {
       const data = await questionService.index()
@@ -55,9 +75,28 @@ const App = () => {
           questions={questions} />} 
           />
           <Route 
-          path="/questions/:id" 
-          element={<QuestionDetails 
-          questions={questions} />} 
+            path="/questions/:id" 
+            element={<QuestionDetails 
+            questions={questions} 
+            user={user}
+            handleDeleteQuestion={handleDeleteQuestion}
+            />} 
+          />
+          <Route 
+            path="/questions/new"
+            element={
+              <ProtectedRoute user={user}>
+                <NewQuestion handleAddQuestion={handleAddQuestion} />
+              </ProtectedRoute>
+            }
+          />
+          <Route 
+            path="/questions/:id/edit"
+            element={
+              <ProtectedRoute user={user}>
+                <EditQuestion handleUpdateQuestion={handleUpdateQuestion} />
+              </ProtectedRoute>
+            }
           />
         <Route
           path="/signup"
