@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import { deleteComment, show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
 
 const QuestionDetails = (props) => {
+  const navigate = useNavigate()
   const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 
@@ -15,8 +16,8 @@ const QuestionDetails = (props) => {
   }
 
   const handleDeleteComment = async (questionId, commentId) => {
-    const deletedComment = await deleteComment(questionId, commentId)
-    setQuestionDetails({ ...questionDetails, comments: questionDetails.comments.filter((c) => c._id !== deletedComment._id) })
+    const updatedQuestion = await deleteComment(questionId, commentId)
+    setQuestionDetails(updatedQuestion)
   }
 
   useEffect(() => {
