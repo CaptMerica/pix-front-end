@@ -85,6 +85,7 @@ const App = () => {
           element={<QuoteList
             quotes={quotes}
             user={user}
+            handleDeleteQuote={handleDeleteQuote}
           />}
         />
         <Route 
