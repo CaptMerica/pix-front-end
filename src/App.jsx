@@ -73,7 +73,7 @@ const App = () => {
   const handleDeleteQuote = async (id) => {
     const deletedQuote = await quoteService.deleteQuote(id)
     setQuotes(quotes.filter(quote => quote._id !== deletedQuote._id))
-    navigate('/qoutes')
+    navigate('/quotes')
   }
 
   return (

@@ -2,8 +2,6 @@ import QuoteCard from "../../components/QuoteCard/QuoteCard"
 import { useParams, Link } from "react-router-dom"
 
 const QuoteList = (props) => {
-  console.log(props)
-
   return (
     <>
       {props.user &&
@@ -23,7 +21,7 @@ const QuoteList = (props) => {
                   Edit Quote
                 </button>
               </Link>
-              <button>Delete</button>
+              <button onClick={() => props.handleDeleteQuote(quote._id)}>Delete</button>
             </>
           }   
         </div>
