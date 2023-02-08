@@ -51,6 +51,8 @@ const App = () => {
     navigate('/questions')
   }
 
+  
+
   useEffect(() => {
     const fetchAllQuestions = async () => {
       const data = await questionService.index()
