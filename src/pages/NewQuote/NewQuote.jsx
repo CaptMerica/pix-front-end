@@ -25,7 +25,7 @@ const NewQuote = (props) => {
           name="content"
           id="content-input"
           value={form.content}
-          placeholder="Create Quote"
+          placeholder="Type Here!"
           onChange={handleChange}
         />
         <button className="form-btn" type="submit">
