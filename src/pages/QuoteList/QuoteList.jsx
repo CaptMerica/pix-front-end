@@ -6,6 +6,8 @@ import './QuoteList.css'
 
 const QuoteList = (props) => {
   return (
+  <>
+    <h1>Quotes</h1>
     <div id="quote-container">
       <div className="add-quote-btn">
         {props.user &&
@@ -32,6 +34,7 @@ const QuoteList = (props) => {
         ))}
       </div>  
     </div>
+  </>
 )
 }
 

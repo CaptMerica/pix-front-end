@@ -17,8 +17,8 @@ const EditQuote = (props) => {
   }
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
+    <div className="form-div">
+      <form className="form-card" onSubmit={handleSubmit}>
         <textarea
           required
           type="text"
@@ -28,9 +28,9 @@ const EditQuote = (props) => {
           placeholder="Edit Quote"
           onChange={handleChange}
         />
-        <button type="submit">Submit Edit</button>
+        <button className="form-btn" type="submit">Submit Edit</button>
       </form>
-    </main>
+    </div>
   )
 }
 
