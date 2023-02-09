@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after {
+  /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default but can be overridden as needed */
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+
+  height: max-content;
+  background-color: #3f7cac;
+}

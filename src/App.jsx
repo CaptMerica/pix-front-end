@@ -95,7 +95,7 @@ const App = () => {
     setQuotes(quotes.filter(quote => quote._id !== deletedQuote._id))
     navigate('/quotes')
   }
-
+  
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />

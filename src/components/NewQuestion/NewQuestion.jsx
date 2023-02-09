@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const NewQuestion = (props) => {
   const [form, setForm] = useState({
-    name: '',
+    title: '',
     content: ''
   })
 
@@ -13,6 +13,7 @@ const NewQuestion = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleAddQuestion(form)
+
   }
 
   return (
@@ -22,7 +23,7 @@ const NewQuestion = (props) => {
             required
             autoComplete="off"
             type="text"
-            name="name"
+            name="title"
             value={form.title}
             placeholder="Add a title"
             onChange={handleChange}

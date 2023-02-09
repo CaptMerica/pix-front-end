@@ -1,9 +1,9 @@
 import { useState } from "react"
+import './NewQuote.css'
 
 const NewQuote = (props) => {
   const [form, setForm] = useState({
-    author: '',
-    content: ''
+    content: '',
   })
 
   const handleChange = ({ target }) => {
@@ -13,26 +13,26 @@ const NewQuote = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleAddQuote(form)
-    setForm({ content: '' })
   }
 
   return (
-    <>
-      <main>
-        <form onSubmit={handleSubmit}>
-          <textarea
-            required
-            type="text"
-            name="content"
-            id="content-input"
-            value={form.content}
-            placeholder="Create Quote"
-            onChange={handleChange}
-          />
-          <button type="submit">Create Quote</button>
-        </form>
-      </main>
-    </>
+    <div className="form-div">
+      <form className="form-card" onSubmit={handleSubmit}>
+        <h4 className="edit-header">Create Quote</h4>
+        <textarea
+          required
+          type="text"
+          name="content"
+          id="content-input"
+          value={form.content}
+          placeholder="Type Here!"
+          onChange={handleChange}
+        />
+        <button className="form-btn" type="submit">
+          Submit Quote
+        </button>
+      </form>
+    </div>
   )
 }
 
