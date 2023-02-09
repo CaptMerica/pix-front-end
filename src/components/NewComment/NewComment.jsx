@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './NewComment.module.css'
 
 const NewComment = (props) => {
   const [form, setForm] = useState({ content: '' })
@@ -13,7 +14,7 @@ const NewComment = (props) => {
   }
 
   return (
-    <div>
+    <div id="comment-container">
       <form onSubmit={handleSubmit}>
         <textarea
           required
@@ -24,10 +25,27 @@ const NewComment = (props) => {
           placeholder="Add a Comment"
           onChange={handleChange}
         />
-        <button type="submit">Add a Comment</button>
+        <div>
+        <button className="comment-btn" type="submit">Add a Comment</button>
+        </div>
       </form>
     </div>
   )
+
+//   <div id=“quote-container”>
+//         <div className=“quote-card”>
+//           <div className=“quote-photo”>
+//             <img src=“” alt=“”/>
+//           </div>
+//           <div className=“quote-text”>
+//             <p>Quote Text</p>
+//           </div>
+//           <div className=“quote-btns”>
+//             <button className=“quote-btn”>Edit Quote</button>
+//             <button className=“quote-btn”>Delete Quote</button>
+//           </div>
+//         </div>
+//       </div>
 
 }
 
