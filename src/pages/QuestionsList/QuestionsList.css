@@ -1,3 +1,9 @@
 .questions-list {
-  border: 2px solid green
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.question-card {
+  border: 2px solid pink;
+  margin-top: 16px;
 }

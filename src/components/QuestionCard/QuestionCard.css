@@ -1,0 +1,9 @@
+.card-photo-div {
+  width: 36px;
+  height: 36px;
+}
+
+.card-photo-img {
+  width: inherit;
+  height: inherit;
+}
