@@ -19,6 +19,7 @@ const EditQuote = (props) => {
   return (
     <div className="form-div">
       <form className="form-card" onSubmit={handleSubmit}>
+        <h4 className="edit-header">Edit Quote</h4>
         <textarea
           required
           type="text"

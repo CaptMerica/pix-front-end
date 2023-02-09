@@ -39,17 +39,20 @@
   font-weight: 800;
 }
 
+.edit-header {
+  margin: 15px;
+}
+
 #content-input {
   padding: 0 20px;
   font-size: 14px;
   line-height: 1.5;
   height: 300px;
   vertical-align: middle;
-  margin-top: 50px;
+  margin-top: 0;
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
   overflow-y: scroll;
   text-align: left;
-  
 }
