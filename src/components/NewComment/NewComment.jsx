@@ -33,22 +33,6 @@ const NewComment = (props) => {
           </div>
     </div>
   )
-
-//   <div id=“quote-container”>
-//         <div className=“quote-card”>
-//           <div className=“quote-photo”>
-//             <img src=“” alt=“”/>
-//           </div>
-//           <div className=“quote-text”>
-//             <p>Quote Text</p>
-//           </div>
-//           <div className=“quote-btns”>
-//             <button className=“quote-btn”>Edit Quote</button>
-//             <button className=“quote-btn”>Delete Quote</button>
-//           </div>
-//         </div>
-//       </div>
-
 }
 
 export default NewComment
