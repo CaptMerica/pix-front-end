@@ -14,7 +14,7 @@ const NewComment = (props) => {
   }
 
   return (
-    <div id="comment-container">
+    <div>
       <div className="comment-card">
       <form onSubmit={handleSubmit}>
         <textarea
@@ -27,7 +27,7 @@ const NewComment = (props) => {
           onChange={handleChange}
           />
         <div>
-        <button className="add-btn" type="submit">Add a Comment</button>
+        <button type="submit">Add a Comment</button>
         </div>
       </form>
           </div>

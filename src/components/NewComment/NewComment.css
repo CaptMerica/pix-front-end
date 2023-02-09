@@ -1,9 +1,25 @@
-.add-btn {
-  flex: content;
-  border-radius: 10px;
+
+
+button {
+  height: 36px;
+  padding: 0 16px;
+  border: 1px solid lightgray;
+  border-radius: 18px;
   background-color: #28d9c1;
-  color: black;
   box-shadow: 0 2px 2px rgba(0,0,0, 0.1);
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  margin: 2px;
+  margin-right: 12px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #e60022;
+  color: whitesmoke;
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
   border: 0.5px solid black;
-  font-weight: 100;
+  font-weight: 800;
 }

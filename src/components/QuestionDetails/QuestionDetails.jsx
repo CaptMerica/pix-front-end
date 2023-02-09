@@ -68,7 +68,7 @@ const QuestionDetails = (props) => {
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>
               {comment.content}
-              <button className="delete-btn" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
+              <button onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
             </li>
           ))}
         </ul>
