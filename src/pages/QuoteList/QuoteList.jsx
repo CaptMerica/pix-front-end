@@ -1,16 +1,20 @@
 import QuoteCard from "../../components/QuoteCard/QuoteCard"
 import { useParams, Link } from "react-router-dom"
 
+
+
 const QuoteList = (props) => {
   return (
-    <>
-      {props.user &&
-        <Link to="/quotes/new">
-          <button>
-            Add Quote
-          </button>
-        </Link>
-      }   
+    <div className="quote-list-container">
+        <div className="add-quote-btn">
+        {props.user &&
+          <Link to="/quotes/new">
+            <button>
+              Add Quote
+            </button>
+          </Link>
+        }
+      </div>   
       {props.quotes.map((quote) => (
         <div key={quote._id}>
           <QuoteCard quote={quote} />
@@ -26,7 +30,7 @@ const QuoteList = (props) => {
           }   
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

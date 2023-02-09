@@ -6,7 +6,6 @@ const EditQuote = (props) => {
   const { state } = useLocation()
   const [form, setForm] = useState(state)
 
-  console.log(state)
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
@@ -16,8 +15,6 @@ const EditQuote = (props) => {
     props.handleUpdateQuote(form)
     setForm({ content: '' })
   }
-
-  console.log("FORM DATA", form)
 
   return (
     <main>
@@ -31,7 +28,7 @@ const EditQuote = (props) => {
           placeholder="Edit Quote"
           onChange={handleChange}
         />
-        <button type="submit">Edit Quote</button>
+        <button type="submit">Submit Edit</button>
       </form>
     </main>
   )

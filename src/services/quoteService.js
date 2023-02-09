@@ -13,7 +13,7 @@ const index = async () => {
 }
 
 const create = async (quoteData) => {
-  console.log(quoteData);
+  console.log("THIS IS IT", quoteData);
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',

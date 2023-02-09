@@ -46,14 +46,15 @@ const QuestionDetails = (props) => {
           {questionDetails.content}
         </main>
         <div>
-          {questionDetails.owner._id === props.user.profile &&
+          {props.user &&
+          questionDetails.owner._id === props.user.profile &&
             <>
               <Link 
                 to={`/questions/${id}/edit`} 
                 state={questionDetails}>
                 <button>Edit Question</button>
-                </Link>
-                <button onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
+              </Link>
+              <button onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
             </>
           }
         </div>

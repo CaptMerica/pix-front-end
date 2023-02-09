@@ -21,8 +21,8 @@ const EditQuestion = (props) => {
             required
             autoComplete="off"
             type="text"
-            name="name"
-            value={form.name}
+            name="title"
+            value={form.title}
             placeholder="Add a title"
             onChange={handleChange}
           />
