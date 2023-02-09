@@ -12,10 +12,10 @@ const QuestionCard = ({question}) => {
 
       <div className='card-properties'>
         <div>
-          <h2>{question.title}</h2>
+          <h2 className='card-text'>{question.title}</h2>
         </div>
         <div className='card-content'>
-          <h5>{question.content}</h5>
+          <h5 className='card-text'>{question.content}</h5>
         </div>
       </div>
     </>
