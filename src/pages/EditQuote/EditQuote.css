@@ -35,7 +35,7 @@
 .form-btn:hover {
   background-color: #e60022;
   color: whitesmoke;
-  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.2);
   border: 0.5px solid black;
   font-weight: 800;
 }
@@ -54,6 +54,7 @@
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
+  background-color: whitesmoke;
   overflow-y: scroll;
   text-align: left;
 }
