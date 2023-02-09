@@ -1,4 +1,6 @@
-
+#question-deets{
+  display: flex;
+}
 
 button {
   height: 36px;

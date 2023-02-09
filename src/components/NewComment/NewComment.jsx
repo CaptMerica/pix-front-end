@@ -14,7 +14,7 @@ const NewComment = (props) => {
   }
 
   return (
-    <div>
+    <div id="comment-container">
       <div className="comment-card">
       <form onSubmit={handleSubmit}>
         <textarea
