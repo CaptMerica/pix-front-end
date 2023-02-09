@@ -1,0 +1,20 @@
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.quote-content {
+  border: 2px solid lightgray;
+  border-radius: 8px;
+  width: inherit;
+  height: 200px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  background-color: whitesmoke;
+}
