@@ -1,5 +1,4 @@
 body {
-  background-color: darksalmon;
   text-align: center;
 }
 
@@ -12,10 +11,10 @@ body {
 .quote-card {
   width: 300px;
   height: 400px;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid lightgray;
-  border-radius: 8px;
+  background-color: #fcddbc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border: 2px solid lightgray;
+  border-radius: 16px;
   margin: 20px;
   text-align: center;
   position: relative;
@@ -66,10 +65,11 @@ body {
   font-size: 12px;
   border: 1px solid lightgray;
   border-radius: 18px;
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
 }
 
 .quote-btn:hover {
-  background-color: #e60022;
+  background-color: #ED1C24;
   color: whitesmoke;
   box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
   border: 0.5px solid black;
@@ -80,7 +80,6 @@ body {
   background-color: whitesmoke;
   color: black;
   font-weight: 600;
-  border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
   margin: 0 5px;
@@ -92,6 +91,7 @@ body {
 #add-quote-btn:hover {
   background-color: #28d9c1;
   border: 1px solid lightgray;
+  border-radius: 18px;
   color: black;
   padding: 15px 32px;
   text-align: center;
@@ -107,4 +107,8 @@ body {
 
 #add-quote-btn:active {
   transform: translateY(4px);
+}
+
+.quote-title {
+  color: white;
 }

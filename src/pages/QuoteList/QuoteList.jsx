@@ -7,7 +7,7 @@ import './QuoteList.css'
 const QuoteList = (props) => {
   return (
   <>
-    <h1>Quotes</h1>
+    <h1 className="quote-title">Quotes</h1>
     <div className="add-quote-container">
       {props.user &&
         <Link to="/quotes/new">

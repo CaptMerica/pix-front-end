@@ -8,10 +8,10 @@
 .form-card {
   width: 300px;
   height: 400px;
-  background-color: white;
+  background-color: #fcddbc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid lightgray;
-  border-radius: 8px;
+  border: 2px solid lightgray;
+  border-radius: 16px;
   margin: 20px;
   text-align: center;
   position: relative;

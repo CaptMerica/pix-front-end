@@ -8,10 +8,10 @@
 .form-card {
   width: 300px;
   height: 400px;
-  background-color: white;
+  background-color: #fcddbc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid lightgray;
-  border-radius: 8px;
+  border: 2px solid lightgray;
+  border-radius: 16px;
   margin: 20px;
   text-align: center;
   position: relative;
@@ -33,7 +33,7 @@
 }
 
 .form-btn:hover {
-  background-color: #e60022;
+  background-color: #ED1C24;
   color: whitesmoke;
   box-shadow: 0 16px 16px rgba(0,0,0, 0.2);
   border: 0.5px solid black;
@@ -54,6 +54,7 @@
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
+  border-radius: 16px;
   background-color: whitesmoke;
   overflow-y: scroll;
   text-align: left;
