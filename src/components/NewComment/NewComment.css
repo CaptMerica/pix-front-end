@@ -1,0 +1,22 @@
+.comment-box {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+#content-input{
+  
+}
+
+.add-btn {
+  flex: content;
+  border-radius: 10px;
+  background-color: #28d9c1;
+  color: black;
+  box-shadow: 0 2px 2px rgba(0,0,0, 0.1);
+  border: 0.5px solid black;
+  font-weight: 100;
+}
