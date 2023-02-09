@@ -46,8 +46,7 @@ const QuestionDetails = (props) => {
           {questionDetails.content}
         </main>
         <div>
-          {props.user &&
-          questionDetails.owner._id === props.user.profile &&
+          {props.user && questionDetails.owner._id === props.user.profile &&
             <>
               <Link 
                 to={`/questions/${id}/edit`} 

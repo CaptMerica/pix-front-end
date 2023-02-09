@@ -1,20 +1,24 @@
-import { Link } from "react-router-dom"
-import '../../../src/components/QuestionCard/QuestionCard.css'
-
+import '../QuestionCard/QuestionCard.css'
 
 const QuestionCard = ({question}) => {
+  const photo = question.owner.photo
+
   return (
-    <div className="card-div">
-      <Link to={`/questions/${question._id}`}>
-          <div>
-            <h2>{question.owner?.name}</h2>
-            <h2>{question.title}</h2>
-          </div>
-          <div>
-            <h5>{question.content}</h5>
-          </div>
-      </Link >
-    </div>
+    <>
+      <div className="card-photo-div">
+        <img className="card-photo-img" src={photo} alt="ownerPhoto" />
+        <h2>{question.owner.name}</h2>
+      </div>
+
+      <div className='card-properties'>
+        <div>
+          <h2 className='card-text'>{question.title}</h2>
+        </div>
+        <div className='card-content'>
+          <h5 className='card-text'>{question.content}</h5>
+        </div>
+      </div>
+    </>
   )
 }
 

@@ -1,3 +1,35 @@
-.card-div {
+.card-photo-div {
+  width: 16%;
+  height: inherit;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 2px solid black;
+}
+
+.card-photo-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-left: 8px;
+  margin-top: 16px;
+
+}
+
+.card-properties {
+  width: 100%;
+}
+
+.card-text {
+  padding-left: 16px;
+}
+
+.card-content {
+  border-top: 2px solid black;
+  margin-top: 12px;
+}
+
+#root {
+  background-color:#3f7cac;
 }
