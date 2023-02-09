@@ -1,7 +1,11 @@
 .card-photo-div {
   border: 2px solid orange;
-  width: 50%;
+  width: 16%;
   height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-photo-img {
@@ -9,11 +13,16 @@
   height: 64px;
   border-radius: 50%;
   margin-left: 8px;
+  margin-top: 16px;
 
 }
 
 .card-properties {
   border: 2px solid blue;
-  margin-left: 50%;
-  width: 50%;
+  width: 100%;
+}
+
+.card-content {
+  border-top: 1px solid black;
+  margin-top: 12px;
 }

@@ -5,18 +5,19 @@ const QuestionCard = ({question}) => {
 
   return (
     <>
-        <div className="card-photo-div">
-          <img className="card-photo-img" src={photo} alt="ownerPhoto" />
+      <div className="card-photo-div">
+        <img className="card-photo-img" src={photo} alt="ownerPhoto" />
+        <h2>{question.owner.name}</h2>
+      </div>
+
+      <div className='card-properties'>
+        <div>
+          <h2>{question.title}</h2>
         </div>
-        <div className='card-properties'>
-          {/* <div>
-            <h2>{question.owner.name}</h2>
-            <h2>{question.name}</h2>
-          </div> */}
-          <div>
-            <h5>{question.content}</h5>
-          </div>
+        <div className='card-content'>
+          <h5>{question.content}</h5>
         </div>
+      </div>
     </>
   )
 }

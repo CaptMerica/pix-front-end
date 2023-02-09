@@ -4,7 +4,7 @@
 }
 
 .question-card {
-  border: 2px solid pink;
+  border: 2px solid black;
   display: flex; 
   margin-top: 16px;
 }
