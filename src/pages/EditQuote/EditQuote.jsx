@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
-import styles from './EditQuote.module.css'
 
 const EditQuote = (props) => {
   const { state } = useLocation()
