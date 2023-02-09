@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
-import styles from './EditQuote.module.css'
+import './EditQuote.css'
 
 const EditQuote = (props) => {
   const { state } = useLocation()
@@ -17,8 +17,9 @@ const EditQuote = (props) => {
   }
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
+    <div className="form-div">
+      <form className="form-card" onSubmit={handleSubmit}>
+        <h4 className="edit-header">Edit Quote</h4>
         <textarea
           required
           type="text"
@@ -28,9 +29,9 @@ const EditQuote = (props) => {
           placeholder="Edit Quote"
           onChange={handleChange}
         />
-        <button type="submit">Submit Edit</button>
+        <button className="form-btn" type="submit">Submit Edit</button>
       </form>
-    </main>
+    </div>
   )
 }
 
