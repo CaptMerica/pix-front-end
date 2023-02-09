@@ -1,9 +1,19 @@
 .card-photo-div {
-  width: 36px;
-  height: 36px;
+  border: 2px solid orange;
+  width: 50%;
+  height: inherit;
 }
 
 .card-photo-img {
-  width: inherit;
-  height: inherit;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-left: 8px;
+
+}
+
+.card-properties {
+  border: 2px solid blue;
+  margin-left: 50%;
+  width: 50%;
 }
