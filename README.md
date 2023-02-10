@@ -41,6 +41,7 @@ You will be directed to the landing page where you can sign up to make lyric quo
 ## Recent Changes 🧹
 - Styling for pages and buttons
 - Updated Add and Delete functionality for buttons
+- 
 
 ## Ice Box 🧊
 [] - Dark Mode!
