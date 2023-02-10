@@ -1,0 +1,79 @@
+.new-ques-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+
+.new-ques-card {
+  width: 300px;
+  height: 420px;
+  background-color: #fcddbc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border: 2px solid lightgray;
+  border-radius: 16px;
+  margin: 20px;
+  text-align: center;
+  position: relative;
+  float: left;
+}
+
+.new-ques-btn {
+  background-color: #28d9c1;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  border: 1px solid lightgray;
+  border-radius: 18px;
+  margin-top: 10px;
+  bottom: 0;
+}
+
+.new-ques-btn:hover {
+  background-color: #e60022;
+  color: whitesmoke;
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.2);
+  border: 0.5px solid black;
+  font-weight: 800;
+}
+
+#new-ques-input {
+  padding: 0 45px;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 48px;
+  vertical-align: middle;
+  margin-top: -6px;
+  resize: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  background-color: whitesmoke;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#new-ques-content {
+  width: 260px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  height: 250px;
+  vertical-align: middle;
+  margin-top: 16px;
+  resize: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid lightgray;
+  border-radius: 16px;
+  background-color: whitesmoke;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+#new-ques-header {
+  margin-top: 24px;
+}
