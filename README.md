@@ -1,8 +1,8 @@
 # Pix
 
-![A mental health app for musicians by Tritonic](public/PIX_3.png)()
+![A mental health app for musicians by Tritonic](public/PIX_3.png)
 
-Pix is a CRUD based application designed for music professionals and hobbyists alike.  It allows users to ask questions, receive feeback, and connect with others in the industry.  The app also serves as a hub for sharing knowledge and provides access to lyrics as quotes.  
+Pix is a CRUD based application designed for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry.  The app also serves as a hub for sharing knowledge and provides access to lyrics as quotes.  
 
 When you open the app, you will be able to see the questions and quotes other users have posted. You'll be taken to the landing page with a sign up window. Once you sign up, you'll be able to ask questions and post lyric quotes.  Users can reply with a comment if they have a solution to the corresponding question.  Users have the option to edit or delete their questions, quotes, and comments if they choose.  
 
