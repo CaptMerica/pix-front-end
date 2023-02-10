@@ -2,11 +2,16 @@
 
 ![A mental health app for musicians]()
 
-This is an album review app where you can share what your favorite album is! Click the "Add Review" button to upload the title, release year, and the artwork for the album of you choice. Below these boxes are a bigger box where you can share your thoughts for everyone to see.  Click the Upload Review below when you have everything ready to share. You can view your review by clicking the "All Albums" button. Once in your review page, you can change the name of the review entirely or delete the review all together.  Other accounts may be able to leave comments on your review and delete them as well.  Have fun!
+Pix is a web application with CRUD functionality for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry. The app also serves as a hub for knowledge sharing and provides access to lyrics as quotes. 
 
-## [Click here to start the app!](https://blackjackrecordreviews.fly.dev/)
+## Developers
+[Patrick Mazara](https://github.com/zaragotcode)
+[Ryan Merica](https://github.com/CaptMerica)
+[Oscar Nunez](https://github.com/oscarnunez1)
 
-## [Trello](https://trello.com/b/sjy84xAB/blackjack-record-reviews) 
+## [Click here to start the app!](https://pix-tritonic.netlify.app/)
+
+## [Trello](https://trello.com/b/iR0dlKnx/pix-trello-board) 
 
 ## Technologies used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -17,22 +22,28 @@ This is an album review app where you can share what your favorite album is! Cli
 
 ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-Mongoose
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 
 ## Attributions
  
 
 ## Recent Changes 🧹
-
+- Styling for pages and buttons
+- Updated Add and Delete functionality for buttons
+- 
 
 ## Ice Box 🧊
-
-
+[] - Dark Mode!
+[] - "Most Helpful" Voting system for comments and posts.
+[] - Award system for accolades.
+[] - Enum for levels of expertise.
+[] - Users and guests can view profiles.
