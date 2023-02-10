@@ -1,6 +1,6 @@
 # Pix
 
-![A mental health app for musicians by Tritonic]()
+![A mental health app for musicians by Tritonic](public/PIX_3.png)()
 
 Pix is a CRUD based application designed for music professionals and hobbyists alike.  It allows users to ask questions, receive feeback, and connect with others in the industry.  The app also serves as a hub for sharing knowledge and provides access to lyrics as quotes.  
 
