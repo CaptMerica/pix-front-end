@@ -59,20 +59,24 @@ const QuestionDetails = (props) => {
           }
         </div>
       </section>
-      <section>
-        <h2 className="comment-header">Comments</h2>
-        {props.user && 
-        <NewComment handleAddComment={handleAddComment} />
-        }
-        <ul className="comment-section" >
-          {questionDetails.comments.map((comment) => (
-            <li key={comment._id}>
-              {comment.content}
-              <button className="comment-delete" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
-            </li>
-          ))}
-        </ul>
-      </section>
+
+
+      <div className="comments-container">
+        <div className="comment-header">Comments</div>
+          <div className="comment-container">
+            {props.user && <NewComment handleAddComment={handleAddComment} />}
+            <div className="comment-text" >
+              {questionDetails.comments.map((comment) => (
+                <>
+                  <p key={comment._id} className="comment-item">
+                    {comment.content}
+                  </p>
+                  <button className="delete-btn" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete</button>
+                </>
+              ))}
+            </div>
+        </div>
+      </div>
     </main>
   )
 }

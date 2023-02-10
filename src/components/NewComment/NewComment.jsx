@@ -14,8 +14,8 @@ const NewComment = (props) => {
   }
 
   return (
-    <div className="comment-div">
-      <form className="comment-card" onSubmit={handleSubmit}>
+    <div className="comments-container">
+      <form className="add-comment-section" onSubmit={handleSubmit}>
         <textarea
           required
           type="text"
@@ -25,7 +25,9 @@ const NewComment = (props) => {
           placeholder="Add a Comment"
           onChange={handleChange}
         />
-        <button className="comment-btn" type="submit">Add a Comment</button>
+        <div className="add-btn-section">
+          <button className="add-btn" type="submit">Add a Comment</button>
+        </div>
       </form>
     </div>
   )

@@ -1,3 +1,5 @@
+
+
 .question-details-main {
   display: flex;
   flex-direction: column;
@@ -94,32 +96,49 @@
   border: 0.5px solid black;
   font-weight: 800;
 }
-
-.comment-delete {
-  background-color: #28d9c1;
-  color: black;
-  font-weight: 600;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 12px;
-  border: 1px solid lightgray;
-  border-radius: 18px;
-  margin-top: 10px;
-  bottom: 0;
-}
-
-.comment-delete:hover {
-  background-color: #e60022;
-  color: whitesmoke;
-  box-shadow: 0 16px 16px rgba(0,0,0, 0.2);
-  border: 0.5px solid black;
-  font-weight: 800;
-}
-
+/* 
 .comment-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  overflow-y: scroll;
+} */
+
+.comment-item {
+  justify-content: space-between;
+  border: 2px solid lightgray;
+
+}
+
+.comments-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.comment-container {
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.comment-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
