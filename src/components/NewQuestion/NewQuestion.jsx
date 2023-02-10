@@ -20,7 +20,7 @@ const NewQuestion = (props) => {
   return (
     <div className="new-ques-div">
         <form className="new-ques-card" onSubmit={handleSubmit}>
-          <h4 className="new-ques-header">New Question</h4>
+          <h4 id="new-ques-header">New Question</h4>
           <input
             required
             autoComplete="off"

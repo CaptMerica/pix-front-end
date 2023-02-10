@@ -2,12 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 10%;
 }
+
 
 .new-ques-card {
   width: 300px;
-  height: 400px;
+  height: 420px;
   background-color: #fcddbc;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 2px solid lightgray;
@@ -42,11 +43,11 @@
 
 #new-ques-input {
   padding: 0 45px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  height: 20px;
+  height: 48px;
   vertical-align: middle;
-  margin-top: 0;
+  margin-top: -6px;
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
@@ -57,12 +58,13 @@
 }
 
 #new-ques-content {
+  width: 260px;
   padding: 0 20px;
   font-size: 14px;
   line-height: 1.5;
-  height: 300px;
+  height: 250px;
   vertical-align: middle;
-  margin-top: 0;
+  margin-top: 16px;
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
@@ -70,4 +72,8 @@
   background-color: whitesmoke;
   overflow-y: scroll;
   text-align: left;
+}
+
+#new-ques-header {
+  margin-top: 24px;
 }
