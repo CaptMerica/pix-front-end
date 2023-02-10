@@ -5,9 +5,11 @@ import logo from '../../../src/assets/teal-pick.png'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <div className='navbar'>
-      <div className='icon-div'>
-        <img id='logo'src={logo} alt='teal-pick' />
-      </div>
+      {/* <div className='icon-div'> */}
+        <Link to="/" className='icon-div'>
+          <img id='logo' src={logo} alt='teal-pick' />
+        </Link>
+      {/* </div> */}
       <div className='button-div'>
         {user ?
           <ul>
