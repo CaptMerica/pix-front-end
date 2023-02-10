@@ -18,15 +18,15 @@ const NewQuestion = (props) => {
   }
 
   return (
-    <div className="form-div">
-        <form className="form-card" onSubmit={handleSubmit}>
-          <h4 className="edit-header">New Question</h4>
+    <div className="new-ques-div">
+        <form className="new-ques-card" onSubmit={handleSubmit}>
+          <h4 className="new-ques-header">New Question</h4>
           <input
             required
             autoComplete="off"
             type="text"
             name="title"
-            id="question-input"
+            id="new-ques-input"
             value={form.title}
             placeholder="Add a title"
             onChange={handleChange}
@@ -34,12 +34,12 @@ const NewQuestion = (props) => {
         <textarea
           type="text"
           name="content"
-          id="content-input"
+          id="new-ques-content"
           value={form.content}
           placeholder="Add optional body text"
           onChange={handleChange}
         />
-        <button className="form-btn" type="submit">Create Question</button>
+        <button className="new-ques-btn" type="submit">Create Question</button>
       </form>
     </div>
   )
