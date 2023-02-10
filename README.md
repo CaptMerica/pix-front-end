@@ -11,7 +11,9 @@ When you open the app, you will be able to see the questions and quotes other us
 ## [Trello Board](https://trello.com/b/iR0dlKnx/pix-trello-board)
 
 ### [Meet the Team!]
-
+![Patrick Mazara - Scrum Manager](https://github.com/zaragotcode)
+![Oscar Nunez - UX Designer, Database Manager](https://github.com/oscarnunez1)
+![Ryan Merica - Git Commander, README](https://github.com/CaptMerica)
 
 ### Technologies Used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
