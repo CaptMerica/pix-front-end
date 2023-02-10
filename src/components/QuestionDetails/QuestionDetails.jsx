@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { deleteComment, show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
 import NewComment from "../NewComment/NewComment"
+import './QuestionDetails.css'
 
 const QuestionDetails = (props) => {
   const navigate = useNavigate()
@@ -32,9 +33,9 @@ const QuestionDetails = (props) => {
   if (!questionDetails.comments) return <h1>Loading</h1>
 
   return (
-    <>
-      <section>
-        <div>
+    <main className="question-details-main">
+      <section id="question-box">
+        <div className="question-details">
           <h2>
             {questionDetails.owner.name}
           </h2>
@@ -42,7 +43,7 @@ const QuestionDetails = (props) => {
             {questionDetails.name}
           </h4>
         </div>
-        <main>
+        <main className="question-text">
           {questionDetails.content}
         </main>
         <div>
@@ -51,15 +52,15 @@ const QuestionDetails = (props) => {
               <Link 
                 to={`/questions/${id}/edit`} 
                 state={questionDetails}>
-                <button>Edit Question</button>
+                <button className="question-edit">Edit Question</button>
               </Link>
-              <button onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
+              <button className="question-delete" onClick={() => props.handleDeleteQuestion(id)}>Delete Question</button>
             </>
           }
         </div>
       </section>
       <section>
-        <h2>Comments</h2>
+        <h2 className="comment-header">Comments</h2>
         {props.user && 
         <NewComment handleAddComment={handleAddComment} />
         }
@@ -67,12 +68,12 @@ const QuestionDetails = (props) => {
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>
               {comment.content}
-              <button onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
+              <button className="comment-delete" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete Comment</button>
             </li>
           ))}
         </ul>
       </section>
-    </>
+    </main>
   )
 }
 
