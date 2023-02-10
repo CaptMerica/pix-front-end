@@ -64,7 +64,7 @@ const QuestionDetails = (props) => {
         {props.user && 
         <NewComment handleAddComment={handleAddComment} />
         }
-        <ul>
+        <ul className="comment-section" >
           {questionDetails.comments.map((comment) => (
             <li key={comment._id}>
               {comment.content}
