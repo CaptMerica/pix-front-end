@@ -1,8 +1,10 @@
 # Pix
 
-![A mental health app for musicians](public/Pix_1.png)
+![A mental health app for musicians]()
 
 Pix is a web application with CRUD functionality for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry. The app also serves as a hub for knowledge sharing and provides access to lyrics as quotes. 
+
+You'll be directed to the landing page where you can sign up. Once you sign up, you can ask questions or upload quotes from your favorite lyrics as many times as you want. You can also edit or delete your questions as well as your comments.  Quotes can also be deleted at any time.
 
 ## Developers
 [Patrick Mazara](https://github.com/zaragotcode)
