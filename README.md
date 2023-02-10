@@ -11,9 +11,7 @@ When you open the app, you will be able to see the questions and quotes other us
 ## [Trello Board](https://trello.com/b/iR0dlKnx/pix-trello-board)
 
 ### [Meet the Team!]
-Ryan Merica: Git Commander | Documenter
-Patrick Mozara: Scrum Manager
-Oscar Nunez: UX Designer | Database Manager
+
 
 ### Technologies Used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -46,18 +44,18 @@ N/A
 
 ## Ice Box 🧊
 
-[] Create a voting system with "likes" that are given to users based on how helpful the comment is for the corresponding question.
+-[ ] Create a voting system with "likes" that are given to users based on how helpful the comment is for the corresponding question.
 
-[] Upvoting and downvoting on a user's comments and posts.
+-[ ] Upvoting and downvoting on a user's comments and posts.
 
-[] Users and guests can view a user's profile and their individual details.
+-[ ] Users and guests can view a user's profile and their individual details.
 
-[] Badges for accolades given to users for the number of helpful comments.
+-[ ] Badges for accolades given to users for the number of helpful comments.
 
-[] Dark Mode!
+-[ ] Dark Mode!
 
-[] Mobile-responsive design.
+-[ ] Mobile-responsive design.
 
-[] Add level of expertise to the user's profile.
+-[ ] Add level of expertise to the user's profile.
 
-[] Add a pop-up window of the sign up/log in page when clicking the respective buttons while on the current page instead of being redirected to do so.
+-[ ] Add a pop-up window of the sign up/log in page when clicking the respective buttons while on the current page instead of being redirected to do so.
