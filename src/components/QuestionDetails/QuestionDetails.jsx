@@ -67,12 +67,12 @@ const QuestionDetails = (props) => {
             {props.user && <NewComment handleAddComment={handleAddComment} />}
             <div className="comment-text" >
               {questionDetails.comments.map((comment) => (
-                <>
+                <div className="comment-card">
                   <p key={comment._id} className="comment-item">
                     {comment.content}
                   </p>
                   <button className="delete-btn" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete</button>
-                </>
+                </div>
               ))}
             </div>
         </div>
