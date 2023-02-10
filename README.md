@@ -1,6 +1,6 @@
 # Pix
 
-![A mental health app for musicians]()
+![A mental health app for musicians](public/Pix_1.png)
 
 Pix is a web application with CRUD functionality for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry. The app also serves as a hub for knowledge sharing and provides access to lyrics as quotes. 
 
