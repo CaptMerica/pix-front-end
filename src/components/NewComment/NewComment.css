@@ -6,19 +6,13 @@
 }
 
 .comment-card {
-  width: 1000px;
-  height: 100px;
-  background-color: #fcddbc;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  border: 2px solid lightgray;
-  border-radius: 16px;
-  margin: 20px;
-  text-align: center;
-  position: relative;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .comment-btn {
+  width: 150px;
   background-color: #28d9c1;
   color: black;
   font-weight: 600;

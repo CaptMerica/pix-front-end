@@ -43,9 +43,9 @@ const QuestionDetails = (props) => {
             {questionDetails.name}
           </h4>
         </div>
-        <main className="question-text">
+        <div className="question-text">
           {questionDetails.content}
-        </main>
+        </div>
         <div>
           {props.user && questionDetails.owner._id === props.user.profile &&
             <>

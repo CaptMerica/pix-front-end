@@ -1,12 +1,21 @@
-#question-box {
+.question-details-main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 2%;
+  align-content: flex-start;
+  background-color: #fcddbc;
+  margin: 0px 60px;
+  margin-top: 60px;
+  border-radius: 32px;
 }
 
-.question-details-main {
-  background-color: #fcddbc;
+#question-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
 }
 
 .question-details {
@@ -17,10 +26,12 @@
   border: 2px solid lightgray;
   border-radius: 16px;
   margin: 20px;
+  margin-right: 20px;
   text-align: center;
   position: relative;
   float: left;
 }
+
 
 .question-text {
   padding: 0 20px;
