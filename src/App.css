@@ -15,7 +15,9 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", 
   Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 600;
-
   height: max-content;
-  background-color: #3f7cac;
+}
+
+#root {
+  background-color: #1a3144;
 }

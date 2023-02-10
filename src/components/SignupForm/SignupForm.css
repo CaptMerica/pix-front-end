@@ -1,0 +1,85 @@
+.signup-form-container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  border: 2px solid lightgray;
+  text-align: left;
+}
+
+.form-header {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.3s ease-in-out;
+}
+
+
+.form-actions {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.submit-btn {
+  width: 100px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 16px;
+  margin: 5px;
+  background-color: #28d9c1;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0,0,0, 0.1);
+}
+
+.submit-btn:hover {
+  background-color: #e60022;
+  color: whitesmoke;
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
+  border: 0.5px solid black;
+  font-weight: 800;
+}
+
+.cancel-btn {
+  width: 100px;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 16px;
+  margin: 5px;
+  background-color: #28d9c1;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0,0,0, 0.1);
+}
+
+.cancel-btn:hover {
+  background-color: #e60022;
+  color: whitesmoke;
+  box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
+  border: 0.5px solid black;
+  font-weight: 800;
+}
