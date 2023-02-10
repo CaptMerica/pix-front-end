@@ -1,7 +1,7 @@
 import '../QuestionCard/QuestionCard.css'
 
 const QuestionCard = ({question}) => {
-  const guestPhoto = 'https://i.imgur.com/ewVejEX.png'
+  const guestPhoto = 'https://i.imgur.com/ewVejEX.png' 
   const photo = question.owner.photo ? question.owner.photo : guestPhoto
 
   return (
