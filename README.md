@@ -1,19 +1,25 @@
-# Pix
+# PIX
 
-![A mental health app for musicians](public/PIX_2.png)
+![Pix Landing Page](public/pix_landing.png)
 
 Pix is a web application with CRUD functionality for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry. The app also serves as a hub for knowledge sharing and provides access to lyrics as quotes. 
 
 You will be directed to the landing page where you can sign up to make lyric quotes and ask questions.  You can edit or delete your question or comment at any time. You can also delete your quotes at any time.
+
+## Getting Started
+
+🖱️ [Click Here](https://pix-tritonic.netlify.app/) to have access to our application.
+
+📒 [Trello](https://trello.com/b/iR0dlKnx/pix-trello-board) has been used as the planning material.
+
+🔙 [Backend](https://github.com/CaptMerica/pix-back-end.git) link.
+
 
 ## Developers
 [Patrick Mazara](https://github.com/zaragotcode)
 [Ryan Merica](https://github.com/CaptMerica)
 [Oscar Nunez](https://github.com/oscarnunez1)
 
-## [Click here to start the app!](https://pix-tritonic.netlify.app/)
-
-## [Trello](https://trello.com/b/iR0dlKnx/pix-trello-board) 
 
 ## Technologies used 💾
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -44,8 +50,8 @@ You will be directed to the landing page where you can sign up to make lyric quo
 - 
 
 ## Ice Box 🧊
-[] - Dark Mode!
-[] - "Most Helpful" Voting system for comments and posts.
-[] - Award system for accolades.
-[] - Enum for levels of expertise.
-[] - Users and guests can view profiles.
+- [ ] Dark Mode!
+- [ ] "Most Helpful" Voting system for comments and posts.
+- [ ] Award system for accolades.
+- [ ] Enum for levels of expertise.
+- [ ] Users and guests can view profiles.
