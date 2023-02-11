@@ -4,15 +4,13 @@
 
 Pix is a web application with CRUD functionality for music professionals and hobbyists alike.  It allows users to ask questions, receive feedback, and connect with others in the industry. The app also serves as a hub for knowledge sharing and provides access to lyrics as quotes. 
 
-You will be directed to the landing page where you can sign up to make lyric quotes and ask questions.  You can edit or delete your question or comment at any time. You can also delete your quotes at any time.
-
 ## Getting Started
 
 🖱️ [Click Here](https://pix-tritonic.netlify.app/) to access our application.
 
-📒 [Trello](https://trello.com/b/iR0dlKnx/pix-trello-board) has been used as the planning material.
+📒 [Here](https://trello.com/b/iR0dlKnx/pix-trello-board) is the link to our planning materials on Trello.
 
-⬅️ [Backend](https://github.com/CaptMerica/pix-back-end.git) link.
+⬅️ [Backend](https://github.com/CaptMerica/pix-back-end.git) repo link.
 
 ## Developers
 [Patrick Mazara](https://github.com/zaragotcode) - Full-Stack Developer & Scrum Master
