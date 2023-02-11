@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import { deleteComment, show } from "../../services/questionService"
 import { createComment } from "../../services/questionService"
@@ -7,7 +7,6 @@ import NewComment from "../NewComment/NewComment"
 import './QuestionDetails.css'
 
 const QuestionDetails = (props) => {
-  const navigate = useNavigate()
   const [ questionDetails, setQuestionDetails ] = useState(null)
   const { id } = useParams()
 

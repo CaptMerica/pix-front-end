@@ -159,10 +159,6 @@ const App = () => {
         />
         <Route path="/" element={<Landing user={user} />} />
         <Route
-          path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
-        />
-        <Route
           path="/login"
           element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
         />
