@@ -39,15 +39,6 @@ body {
   border-radius: 50%;
 }
 
-.quote-text {
-  padding: 0 20px;
-}
-
-.quote-text p {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
 .quote-btns {
   position: absolute;
   bottom: 20px;
@@ -67,14 +58,16 @@ body {
   border: 1px solid lightgray;
   border-radius: 18px;
   box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
+  transition: 0.3s;
 }
 
 .quote-btn:hover {
   background-color: #ED1C24;
   color: whitesmoke;
   box-shadow: 0 16px 16px rgba(0,0,0, 0.1);
-  border: 0.5px solid black;
+  border: 1px solid lightgrey;
   font-weight: 800;
+  transition: 0.3s;
 }
 
 #add-quote-btn {
@@ -87,6 +80,7 @@ body {
   font-size: 12px;
   border: 1px solid lightgray;
   border-radius: 18px;
+  transition: 0.5s;
 }
 
 #add-quote-btn:hover {
@@ -96,21 +90,11 @@ body {
   color: black;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
-
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.5s;
 }
 
 .quote-title {
   color: white;
 }
-
-#add-quote-btn:active {
-  transform: translateY(4px);
-}
-

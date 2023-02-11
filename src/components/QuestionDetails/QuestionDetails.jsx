@@ -71,7 +71,9 @@ const QuestionDetails = (props) => {
                   <p key={comment._id} className="comment-item">
                     {comment.content}
                   </p>
-                  <button className="delete-btn" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete</button>
+                  {comment.commenter._id === props.user?.profile &&
+                    <button className="delete-btn" onClick={() => handleDeleteComment(questionDetails._id, comment._id)}>Delete</button>
+                  }
                 </div>
               ))}
             </div>

@@ -95,6 +95,7 @@ const SignupForm = props => {
             autoComplete="off"
             id="confirm"
             value={passwordConf}
+            required
             name="passwordConf"
             onChange={handleChange}
           />
