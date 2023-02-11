@@ -14,12 +14,12 @@ You will be directed to the landing page where you can sign up to make lyric quo
 
 ⬅️ [Backend](https://github.com/CaptMerica/pix-back-end.git) link.
 
-
 ## Developers
-[Patrick Mazara](https://github.com/zaragotcode)
-[Ryan Merica](https://github.com/CaptMerica)
-[Oscar Nunez](https://github.com/oscarnunez1)
+[Patrick Mazara](https://github.com/zaragotcode) - Full-Stack Developer & Scrum Master
 
+[Ryan Merica](https://github.com/CaptMerica) - Full-Stack Developer & Git Commander
+
+[Oscar Nunez](https://github.com/oscarnunez1) - Full-Stack Developer & UI Designer
 
 ## Technologies used 💾
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -41,7 +41,7 @@ You will be directed to the landing page where you can sign up to make lyric quo
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
  
 
-## Recent Changes 🧹
+## Latest Modifications 🧹
 - Improved animation for buttons
 - Restricted guest functionality in app
 - Updated UI for comments section
