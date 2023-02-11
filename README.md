@@ -55,3 +55,8 @@ You will be directed to the landing page where you can sign up to make lyric quo
 - [ ] Award system for accolades.
 - [ ] Enum for levels of expertise.
 - [ ] Users and guests can view profiles.
+
+## Special Thanks
+[Mary Lueder](https://github.com/mjlueder)
+[Robert Fridlender](https://github.com/robfrid06)
+[Pin Chen](https://github.com/WarmSkin)
