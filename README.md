@@ -8,11 +8,11 @@ You will be directed to the landing page where you can sign up to make lyric quo
 
 ## Getting Started
 
-🖱️ [Click Here](https://pix-tritonic.netlify.app/) to have access to our application.
+🖱️ [Click Here](https://pix-tritonic.netlify.app/) to access our application.
 
 📒 [Trello](https://trello.com/b/iR0dlKnx/pix-trello-board) has been used as the planning material.
 
-🔙 [Backend](https://github.com/CaptMerica/pix-back-end.git) link.
+⬅️ [Backend](https://github.com/CaptMerica/pix-back-end.git) link.
 
 
 ## Developers
@@ -22,6 +22,14 @@ You will be directed to the landing page where you can sign up to make lyric quo
 
 
 ## Technologies used 💾
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -30,24 +38,16 @@ You will be directed to the landing page where you can sign up to make lyric quo
 
 ![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
-
-## Attributions
  
 
 ## Recent Changes 🧹
-- Styling for pages and buttons
-- Updated Add and Delete functionality for buttons
-- 
+- Improved animation for buttons
+- Restricted guest functionality in app
+- Updated UI for comments section
+- Implented logo in landing page
+- Fixed password field in log in and sign up
+- Added profile photos to questions and quotes
 
 ## Ice Box 🧊
 - [ ] Dark Mode!
