@@ -12,7 +12,7 @@ body {
 .quote-card {
   width: 300px;
   height: 400px;
-  background-color: #fcddbc;
+  background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border: 2px solid lightgray;
   border-radius: 16px;

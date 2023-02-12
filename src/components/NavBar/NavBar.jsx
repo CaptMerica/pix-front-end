@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 import './NavBar.css'
-import logo from '../../../src/assets/teal-pick.png'
 
 const NavBar = ({ user, handleLogout }) => {
+  
+  const logo = 'https://i.imgur.com/E8GrkDR.png'
+
   return (
     <div className='navbar'>
-      {/* <div className='icon-div'> */}
         <Link to="/" className='icon-div'>
           <img id='logo' src={logo} alt='teal-pick' />
         </Link>
-      {/* </div> */}
       <div className='button-div'>
         {user ?
           <ul>

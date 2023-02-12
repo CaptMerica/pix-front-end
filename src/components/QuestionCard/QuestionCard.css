@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   border-right: 2px solid black;
+  gap: 1rem;
 }
 
 .card-photo-img {
@@ -23,6 +24,10 @@
 
 .card-text {
   padding-left: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .card-content {

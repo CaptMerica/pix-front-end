@@ -8,8 +8,8 @@
 
 .new-ques-card {
   width: 300px;
-  height: 420px;
-  background-color: #fcddbc;
+  height: 450px;
+  background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 2px solid lightgray;
   border-radius: 16px;
@@ -30,6 +30,7 @@
   border: 1px solid lightgray;
   border-radius: 18px;
   margin-top: 10px;
+  margin: 2rem;
   bottom: 0;
 }
 
@@ -46,19 +47,20 @@
   font-size: 16px;
   line-height: 1.5;
   height: 48px;
+  width: 80%;
   vertical-align: middle;
   margin-top: -6px;
   resize: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
   border-radius: 16px;
-  background-color: whitesmoke;
+  background-color: white;
   overflow-y: scroll;
   text-align: left;
 }
 
 #new-ques-content {
-  width: 260px;
+  width: 80%;
   padding: 0 20px;
   font-size: 14px;
   line-height: 1.5;
@@ -69,7 +71,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid lightgray;
   border-radius: 16px;
-  background-color: whitesmoke;
+  background-color: white;
   overflow-y: scroll;
   text-align: left;
 }
